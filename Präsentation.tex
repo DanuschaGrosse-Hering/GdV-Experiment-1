@@ -36,6 +36,8 @@
 
 %R-Code
 \usepackage{xcolor}
+\usepackage{wrapfig}
+
 
 \usetheme{Dresden}
 \usecolortheme{spruce}
@@ -57,7 +59,7 @@
 \begin{frame}{Einleitung}
 \begin{itemize}
 \item Thema: Längenschätzung
-\item bekannt aus TV-Shows zb. Schlag den Star
+\item bekannt aus TV-Shows z.B. \enquote{Schlag den Star}
 \item bei uns: Probanden bekommen zwei verschiedenen Längen gesagt und müssen diese so gut wie möglich nachzeichnen
 \end{itemize}
 \end{frame}
@@ -69,7 +71,7 @@
 \item jeder Proband wird einzeln in einen leeren Raum gesetzt
 \item in dem Raum steht ein Stuhl und ein leerer, schlichter Tisch 
 \item auf diesem liegen ein leerer Zettel und Stift
-\item insgesamt gibt es zwei verschiedene Zettelgrößen und zwei verschieden dicke Stiftmienen
+\item insgesamt gibt es zwei verschiedene Zettelgrößen und zwei verschieden dicke Stiftminen
 \item dann werden den Probanden eine Länge mitgeteilt (5cm oder 20cm)
 \item die Probanden sollen die Länge auf das Papier zeichnen
 \item danach bekommen sie die zweite Länge gesagt
@@ -96,10 +98,11 @@ Kann eine Länge genauer als die andere Länge gezeichnet werden?
 \begin{frame}{Analyse des Problems}
 	\textbf{1. interessierende abhängige Variable}
 	\begin{itemize}
-	\item genannte Längen $\rightarrow$ zwei Faktorstufen
+	\item gemessene Längen $x^{i}$ i=5,20
 	\end{itemize}
 	\textbf{2. interessierende Einflussvariablen}
 	\begin{itemize}
+	\item genannte Längen $\rightarrow$ zwei Faktorstufen
 	\item die Papiergröße (DIN A4, DIN A3)
 	\item die Größe der Stiftmine (2mm, 0.5mm)
 	\item[$\Rightarrow$] \textbf{Blockvariablen}
@@ -129,21 +132,21 @@ Kann eine Länge genauer als die andere Länge gezeichnet werden?
 \begin{frame}[fragile]{Modell, Hypothesen und statistische Auswertungsmethoden}
 	\begin{itemize}
 \item \visible<1->{ $x^{\{ i \}}_1, ....,x^{\{ i \}}_n  $ mit $ i = 5, 20 $ Messungen der gezeichneten Längen}
- \item \visible<2-> {Hypothesen:} 
+ \item \visible<1-> {Hypothesen:} 
 	\begin{enumerate}
-	\item \visible<2-> {$ H_0: \mu^{\{ 5 \}} = 5 $ vs. $H_1: \mu^{\{ 5 \}} \neq 5 $
+	\item \visible<1-> {$ H_0: \mu^{\{ 5 \}} = 5 $ vs. $H_1: \mu^{\{ 5 \}} \neq 5 $
 	\item $H_0: \mu^{\{ 20 \}} = 20 $ vs. $H_1: \mu^{\{ 20 \}} \neq 20 $ }
 	\end{enumerate}
-\item \visible<3->  {Statistische Tests zum Niveau $\alpha = 0.05 $}
+\item \visible<2->  {Statistische Tests zum Niveau $\alpha = 0.05 $}
 	\end{itemize}
 	\begin{enumerate}
-  \item[1]<3->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
+  \item[1]<2->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
 	shapiro.test(...)
 		\end{lstlisting} 
- \item[2a]<4-> Zweiseitiger Einstichproben-t-Test (Normalverteilungsannahme kann nicht abgelehnt werden): \begin{lstlisting}[language=R]
+ \item[2a]<2-> Zweiseitiger Einstichproben-t-Test (Normalverteilungsannahme kann nicht abgelehnt werden): \begin{lstlisting}[language=R]
 t.test(..., mu = i)$p.value
 \end{lstlisting}
- \item[2b]<5-> Zweiseitiger Wilcoxon-Vorzeichen-Rang-Test (Normalverteilungsannahme wird abgelehnt):
+ \item[2b]<2-> Zweiseitiger Wilcoxon-Vorzeichen-Rang-Test (Normalverteilungsannahme wird abgelehnt):
  \begin{lstlisting}[language=R]
 wilcox.test(..., mu = i)$p.value
 \end{lstlisting} 
@@ -170,23 +173,23 @@ Transformation der Messwerte bedeutet, dass statt der Messwerte selbst eine Grö
 \item <1-> Hypothesen:
  $ H_0: \tilde{\mu}^{\{ 5 \}} -\tilde{\mu}^{\{ 20 \}}  = 0  $ vs. $H_1: \tilde{\mu}^{\{ 5 \}} -\tilde{\mu}^{\{ 20 \}}  \neq 0 $
 bzw.  $H_0: \tilde{\mu}^{\{ 5 \}} =\tilde{\mu}^{\{ 20 \}}  $ vs. $H_1: \tilde{\mu}^{\{ 5 \}} \neq \tilde{\mu}^{\{ 20 \}} $
-\item[1]<2->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
+\item[1]<1->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
 shapiro.test(y5 - y20)
 \end{lstlisting} 
-\item[2a]<3-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
+\item[2a]<2-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
 \begin{lstlisting}[language=R]
 var.test(y5, y20, alternative="two.sided")
 \end{lstlisting} 
 Zweiseitige Zweistichproben-t-Tests:
-\item[2a.1]<4-> Annahme der Varianzhomogenität bleibt beibehalten: 
+\item[2a.1]<2-> Annahme der Varianzhomogenität bleibt beibehalten: 
 \begin{lstlisting}[language=R]
 t.test(y5, y20, paired = TRUE, var.equal = TRUE )
 \end{lstlisting} 
-\item[2a.2]<4-> Signifikante Abweichung von der Annahme: 
+\item[2a.2]<2-> Signifikante Abweichung von der Annahme: 
 \begin{lstlisting}[language=R]
 t.test(y5, y20, paired = TRUE, var.equal = FALSE)
 \end{lstlisting} 
-\item[2b]<5-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
+\item[2b]<2-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
 \begin{lstlisting}[language=R]
 wilcox.test(y5 - y20)$p.value
 \end{lstlisting} 
@@ -201,22 +204,16 @@ wilcox.test(y5 - y20)$p.value
 \item Identifizierbarkeit: alle Stufenkombinationen werden durchgeführt
 \end{itemize}
 \end{frame}
-\begin{frame}{Beschreibung der Versuchsplanung}
-\begin{itemize}
-	\item Blockbildung (zur Eliminierung der Effekte von Störfaktoren): Papiergröße und Stiftgröße  also $2^2$ Blöcke 
-	\item Randomisierung der Zuteilung der Probanden  zu den jeweiligen Kombinationen von  Faktorstufe, Papiergröße, Stiftgröße und Versuchsleiterin
-	\item Eliminierung: Entfernung aller Ablenkungen im Raum: visuell und auditiv
-	\item Messung aller gezeichneten Längen von einer Versuchsleiterin : Messfehler zu reduzieren/konstanthalten
-		\end{itemize}
-\end{frame}
-\begin{frame}{Versuchsplan}
+
+\begin{frame}[fragile]{Versuchsplan}
 	\textbf{1. Grafische Bestimmung der minimalen Stichprobengröße}\\
-	$\alpha =0.05$, $\beta = 0.95$ und $\delta =0.5$\\
+	$\alpha =0.05$, $\beta = 0.95$ und $\delta =1$\\
 	 Betrachte die Stichprobengröße n $\in [1,28]$
 	 
-	\begin{center}
-		\includegraphics[scale=0.4]{Stichprobengröße.png}
-	\end{center}
+
+	\includegraphics[scale=0.4]{Stichprobengröße.png}
+ 
+
 
 	$\Rightarrow n > 0$
 \end{frame}
@@ -238,7 +235,7 @@ wilcox.test(y5 - y20)$p.value
 	\end{itemize}
 	
 \end{frame}
-\begin{frame}{Versuchsplan (3/4)}
+\begin{frame}[fragile]{Versuchsplan (3/4)}
 	
 \includegraphics[scale=0.7]{Code_Versuchsplan.png}
 
