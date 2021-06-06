@@ -137,16 +137,16 @@ Kann eine Länge genauer als die andere Länge gezeichnet werden?
 	\item \visible<1-> {$ H_0: \mu^{\{ 5 \}} = 5 $ vs. $H_1: \mu^{\{ 5 \}} \neq 5 $
 	\item $H_0: \mu^{\{ 20 \}} = 20 $ vs. $H_1: \mu^{\{ 20 \}} \neq 20 $ }
 	\end{enumerate}
-\item \visible<2->  {Statistische Tests zum Niveau $\alpha = 0.05 $}
+\item \visible<1->  {Statistische Tests zum Niveau $\alpha = 0.05 $}
 	\end{itemize}
 	\begin{enumerate}
-  \item[1]<2->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
+  \item[1]<1->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
 	shapiro.test(...)
 		\end{lstlisting} 
- \item[2a]<2-> Zweiseitiger Einstichproben-t-Test (Normalverteilungsannahme kann nicht abgelehnt werden): \begin{lstlisting}[language=R]
+ \item[2a]<1-> Zweiseitiger Einstichproben-t-Test (Normalverteilungsannahme kann nicht abgelehnt werden): \begin{lstlisting}[language=R]
 t.test(..., mu = i)$p.value
 \end{lstlisting}
- \item[2b]<2-> Zweiseitiger Wilcoxon-Vorzeichen-Rang-Test (Normalverteilungsannahme wird abgelehnt):
+ \item[2b]<1-> Zweiseitiger Wilcoxon-Vorzeichen-Rang-Test (Normalverteilungsannahme wird abgelehnt):
  \begin{lstlisting}[language=R]
 wilcox.test(..., mu = i)$p.value
 \end{lstlisting} 
@@ -176,20 +176,20 @@ bzw.  $H_0: \tilde{\mu}^{\{ 5 \}} =\tilde{\mu}^{\{ 20 \}}  $ vs. $H_1: \tilde{\m
 \item[1]<1->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
 shapiro.test(y5 - y20)
 \end{lstlisting} 
-\item[2a]<2-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
+\item[2a]<1-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
 \begin{lstlisting}[language=R]
 var.test(y5, y20, alternative="two.sided")
 \end{lstlisting} 
 Zweiseitige Zweistichproben-t-Tests:
-\item[2a.1]<2-> Annahme der Varianzhomogenität bleibt beibehalten: 
+\item[2a.1]<1-> Annahme der Varianzhomogenität bleibt beibehalten: 
 \begin{lstlisting}[language=R]
 t.test(y5, y20, paired = TRUE, var.equal = TRUE )
 \end{lstlisting} 
-\item[2a.2]<2-> Signifikante Abweichung von der Annahme: 
+\item[2a.2]<1-> Signifikante Abweichung von der Annahme: 
 \begin{lstlisting}[language=R]
 t.test(y5, y20, paired = TRUE, var.equal = FALSE)
 \end{lstlisting} 
-\item[2b]<2-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
+\item[2b]<1-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
 \begin{lstlisting}[language=R]
 wilcox.test(y5 - y20)$p.value
 \end{lstlisting} 
@@ -211,7 +211,7 @@ wilcox.test(y5 - y20)$p.value
 	 Betrachte die Stichprobengröße n $\in [1,28]$
 	 
 
-	\includegraphics[scale=0.4]{Stichprobengröße.png}
+	\includegraphics[scale=0.37]{Stichprobengröße.png}
  
 
 
@@ -229,7 +229,9 @@ wilcox.test(y5 - y20)$p.value
 		 mit k $\in \mathbb{N}_+$
 		
 		\item mögliche Probanden =28 $\Rightarrow$ k = 3 $\Rightarrow$ n=24 (Zufällig)
-		\item Fehler 2.Art mit n=24 : ca.0.35 (einseitiger t-Test), ca.0.6 (zweiseitiger t-Test)
+		\item Fehler 2.Art mit n=24 :\\
+		 ca.0.003 (zweiseitiger Einstichproben-t-Test),\\ 
+		 ca.0.076 (zweiseitiger Zweistichproben-t-Test)
 		
 		
 	\end{itemize}
