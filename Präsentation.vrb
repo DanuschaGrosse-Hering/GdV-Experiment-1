@@ -1,0 +1,25 @@
+\begin{itemize}
+\item <1-> Hypothesen:
+ $ H_0: \tilde{\mu}^{\{ 5 \}} -\tilde{\mu}^{\{ 20 \}}  = 0  $ vs. $H_1: \tilde{\mu}^{\{ 5 \}} -\tilde{\mu}^{\{ 20 \}}  \neq 0 $
+bzw.  $H_0: \tilde{\mu}^{\{ 5 \}} =\tilde{\mu}^{\{ 20 \}}  $ vs. $H_1: \tilde{\mu}^{\{ 5 \}} \neq \tilde{\mu}^{\{ 20 \}} $
+\item[1]<2->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
+shapiro.test(y5 - y20)
+\end{lstlisting}
+\item[2a]<3-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
+\begin{lstlisting}[language=R]
+var.test(y5, y20, alternative="two.sided")
+\end{lstlisting}
+Zweiseitige Zweistichproben-t-Tests:
+\item[2a.1]<4-> Annahme der Varianzhomogenität bleibt beibehalten:
+\begin{lstlisting}[language=R]
+t.test(y5, y20, paired = TRUE, var.equal = TRUE )
+\end{lstlisting}
+\item[2a.2]<4-> Signifikante Abweichung von der Annahme:
+\begin{lstlisting}[language=R]
+t.test(y5, y20, paired = TRUE, var.equal = FALSE)
+\end{lstlisting}
+\item[2b]<5-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
+\begin{lstlisting}[language=R]
+wilcox.test(y5 - y20)$p.value
+\end{lstlisting}
+\end{itemize}
