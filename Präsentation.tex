@@ -143,10 +143,10 @@ Kann eine Länge genauer als die andere Länge gezeichnet werden?
   \item[1]<1->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
 	shapiro.test(...)
 		\end{lstlisting} 
- \item[2a]<1-> Zweiseitiger Einstichproben-t-Test (Normalverteilungsannahme kann nicht abgelehnt werden): \begin{lstlisting}[language=R]
+ \item[2a]<2-> Zweiseitiger Einstichproben-t-Test (Normalverteilungsannahme kann nicht abgelehnt werden): \begin{lstlisting}[language=R]
 t.test(..., mu = i)$p.value
 \end{lstlisting}
- \item[2b]<1-> Zweiseitiger Wilcoxon-Vorzeichen-Rang-Test (Normalverteilungsannahme wird abgelehnt):
+ \item[2b]<2-> Zweiseitiger Wilcoxon-Vorzeichen-Rang-Test (Normalverteilungsannahme wird abgelehnt):
  \begin{lstlisting}[language=R]
 wilcox.test(..., mu = i)$p.value
 \end{lstlisting} 
@@ -176,20 +176,20 @@ bzw.  $H_0: \tilde{\mu}^{\{ 5 \}} =\tilde{\mu}^{\{ 20 \}}  $ vs. $H_1: \tilde{\m
 \item[1]<1->  Test auf Normalverteilungsannahme in R mit:  \begin{lstlisting}[language=R]
 shapiro.test(y5 - y20)
 \end{lstlisting} 
-\item[2a]<1-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
+\item[2a]<2-> Normalverteilung nicht abgelehnt $\rightarrow $ auf Varianzhomogenität testen: $H_0: \sigma_1 = \sigma_2 $ vs. $ H_1: \sigma_1 \neq \sigma_2 $ mit:
 \begin{lstlisting}[language=R]
 var.test(y5, y20, alternative="two.sided")
 \end{lstlisting} 
 Zweiseitige Zweistichproben-t-Tests:
-\item[2a.1]<1-> Annahme der Varianzhomogenität bleibt beibehalten: 
+\item[2a.1]<2-> Annahme der Varianzhomogenität bleibt beibehalten: 
 \begin{lstlisting}[language=R]
 t.test(y5, y20, paired = TRUE, var.equal = TRUE )
 \end{lstlisting} 
-\item[2a.2]<1-> Signifikante Abweichung von der Annahme: 
+\item[2a.2]<2-> Signifikante Abweichung von der Annahme: 
 \begin{lstlisting}[language=R]
 t.test(y5, y20, paired = TRUE, var.equal = FALSE)
 \end{lstlisting} 
-\item[2b]<1-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
+\item[2b]<2-> Keine Normalverteilung: Zweistichproben-Wilcoxon-Test
 \begin{lstlisting}[language=R]
 wilcox.test(y5 - y20)$p.value
 \end{lstlisting} 
