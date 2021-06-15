@@ -1,0 +1,155 @@
+\documentclass[ ngerman, fontsize= 12pt, paper=a4, headings=big, titlepage=true]{article}
+
+%Sprache
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{lmodern, microtype}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{enumerate}
+
+
+%Tablellen:
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{hhline,float}
+
+%Mathematik
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bbm}
+
+%Grafik
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage[svgnames]{xcolor}
+\usepackage[
+left=3cm,
+right=2cm,
+top=2.5cm,
+bottom=2cm,
+%includeheadfoot
+]{geometry}
+
+%R-Code
+\usepackage{listings}
+\lstset{language=R,
+	basicstyle=\small\ttfamily,
+	stringstyle=\color{DarkGreen},
+	otherkeywords={0,1,2,3,4,5,6,7,8,9},
+	morekeywords={TRUE,FALSE},
+	deletekeywords={data,frame,length,as,character},
+	keywordstyle=\color{blue},
+	commentstyle=\color{DarkGreen},
+}
+
+\begin{document}
+\textbf{}	
+
+\begin{center}
+	
+\textbf{\Large{Übersicht-Temperaturexperiment}} \\
+
+Kaya Maria Bayer, Ketevan Gurtskaia, Alicia Hemmersbach, Danuscha Große-Hering
+
+\end{center}
+
+\textbf{1. Einleitung (ein Satz reicht bei Präsentationen und Postern)}
+\begin{enumerate}[-]
+\item Motivation, kurze Beschreibung von Inhalt und Ziel des Experimentes
+\item kurze Erläuterung der Vorgehensweise
+\item Überblick über die einzelnen Kapitel
+\end{enumerate}
+
+\textbf{2. Problemstellung und Versuchsbedingungen}
+\begin{enumerate}[-]
+\item Beschreibung der Ziele des Experimentes \\
+	Gibt es einen Unterschied ob Drinnen oder Draußen gemessen wird?\\
+	Stimmen die beiden Messungen eines Geräts tendenziell überein?\\
+	Sind die Außensensoren genauso genau in der Messung wie die Innensensoren?\\ 
+	
+\item Beschreibung der Versuchsbedingungen\\
+Bei der ersten Messung werden alle Thermometer Draußen platziert, bei der zweiten Messung werden alle Thermometer Drinnen platziert.\\
+\begin{itemize}
+	
+\item Die Sensoren sollen nebeneinander gestellt werden.\\
+
+\item Alle Thermometer sollen im Schatten und an einem windgeschützten Ort platziert werden. Nicht in der Nähe von störenden Wärmequellen stellen. \\
+
+\item Zwischen den zwei Messungen soll eine gewisse Zeit vergangen sein.
+
+\item Die Temperatur zu den zwei Messzeiten/-Orten soll ungefähr gleich sein.
+
+\item Die Temperatur soll nach ca. 20 Minuten abgelesen und dokumentiert werden (so genau wie das Thermometer dies ausgibt) \\
+
+\item Die Thermometer sollen möglichst neu sein oder mindestens gleich alt sein.\\
+
+\item Das Ablesen der Temperatur und das aufstellen der Thermometer soll möglichst in der gleichen Reihenfolge geschehen. Die Abstände zwischen dem Aufstellen/Ablesen sollen möglichst gering sein.
+
+\end{itemize}
+
+
+\end{enumerate}
+
+\textbf{3. Analyse des Problems}
+\begin{enumerate}[-]
+\item Was ist die interessierende abhängige Variable?
+	die gemessene Temperatur der Außen-und Innensensoren
+\item Was sind interessierende Einflussvariablen und wie können diese variiert werden? \\
+\begin{itemize}
+	\item wahre Temperatur\\
+	\item Ort des Thermometers: Drinnen oder Draußen
+	\item Art des Sensors 
+\end{itemize}
+
+
+
+\item Was sind mögliche Störvariablen und welche können kontrolliert werden?\\
+Sonne, Wind, Heizung, Klimaanlage/Ventilator, Reaktionszeit, Zustand des Thermometers,  Tageszeit(bezogen auf unterschiedliche Temperaturen am Tag), Thermometer, Luftfeuchtigkeit, Personen im Raum,
+\item Von welchen Störvariablen soll noch der Einfluss erfasst werden? \\
+\item Welche Störvariablen sollen als Blockvariablen aufgefasst werden? \\
+\end{enumerate}
+
+\textbf{4. Modell, Hypothesen und statistische Auswertungsmethoden}
+\begin{enumerate}[-]
+\item  Mathematische Formulierung des Modells und der Null- und Alternativ-Hypothesen \\
+
+\item Nennung der statistischen Auswertungsmethoden inkl. der R-Funktionen. Die Darstellung soll möglichst allgemein sein und sich nicht auf den Spezialfall des Experimentes beziehen. \\
+
+\end{enumerate}
+
+\textbf{5. Versuchsplanung}
+\begin{enumerate}[-]
+\item  Genaue Beschreibung der Versuchsplanung, d.h.
+\begin{enumerate}[*]
+	\item Angabe, was für die Maximierung der Primärvariation( Variation der Zielvariable durch Einflussvariablen), für die Minimierung der
+	Sekundärvariation(Variation der Zielvariable durch Störvariablen) und für die Identifizierbarkeit dient.
+
+	
+	\item Verwendung von Fachbegriffen wie Eliminierung, Konstanthaltung, Art der Verblindung, Blockbildung, Parallelisierung, Randomisierung, Umwandlung von Störvariablen, Wiederholungsmessung
+	\item Nutzen von vollständig randomisierten Plänen, randomisierten vollständigen Blockplänen, systematisch variierten vollständigen Blockplänen, geschachtelten Blockvariablen, balanzierten unvollständigen Blockplänen
+	
+	\item Geben Sie genau an, mit welchen R-Funktionen, was bestimmt wurde.
+	\item Bei Bestimmung des Stichprobenumfanges soll die Vorgehensweise genau beschrieben
+	werden. 
+	\item Außerdem soll beschrieben werden, wer, wann, was, wie, unter welchen Bedingungen
+	untersuchen soll. Dabei reicht im Hauptteil des Berichtes, in der Präsentation und
+	im Poster die Angabe des Namens der Methode bzw. der R-Funktion, mit der
+	der Versuchsplan und die Randomisierung gewonnen wurde. Die genaue Angabe,
+	wer, wann, was, wie, unter welchen Bedingungen untersuchen soll, kann im Anhang
+	gegeben werden
+	
+	
+
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
+
+	
