@@ -1,0 +1,111 @@
+\documentclass[ ngerman, fontsize= 12pt, paper=a4, headings=big, titlepage=true]{article}
+
+%Sprache
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{lmodern, microtype}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{enumerate}
+
+%Tablellen:
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{hhline,float}
+
+%Mathematik
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bbm}
+
+%Grafik
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage[svgnames]{xcolor}
+\usepackage[
+left=3cm,
+right=2cm,
+top=2.5cm,
+bottom=2cm,
+%includeheadfoot
+]{geometry}
+
+%R-Code
+\usepackage{listings}
+\lstset{language=R,
+	basicstyle=\small\ttfamily,
+	stringstyle=\color{DarkGreen},
+	otherkeywords={0,1,2,3,4,5,6,7,8,9},
+	morekeywords={TRUE,FALSE},
+	deletekeywords={data,frame,length,as,character},
+	keywordstyle=\color{blue},
+	commentstyle=\color{DarkGreen},
+}
+
+\begin{document}
+	
+	
+\begin{center}
+	\Large
+	Technische Universität Dortmund\\
+	Fakultät Statistik\\
+	Sommersemester 2021\\
+	
+	\vspace{4em}
+	
+	Grundlagen der Versuchaplanung: Bericht über das 2.Experiment
+	
+	\Huge
+	\textbf{Temperaturexperiment}
+	
+	\Large
+	\vspace{5em}
+	Dozenten:\\
+	JProf. Dr. Kirsten Schorning, M.Sc. Onur Gül, B.Sc. Wiebke Dammann\\
+	
+	
+	\vspace{3em}
+	Autorinnen: \\
+	Kaya Maria Bayer\\
+	Ketevan Gurtskaia\\
+    Danuscha Große-Hering\\	
+	Alicia Hemmersbach\\
+
+	
+	
+	\vspace{4em}
+	
+	05.Juli 2021
+	
+\end{center}
+
+\newpage	
+
+\tableofcontents
+\newpage
+
+\section{Einleitung}
+\section{Problemstellung und Versuchsbedingungen}
+\section{Analyse des Problems}
+\section{Modell, Hypothesen und statistische Auswertungsmethoden}
+\section{Versuchsplanung}
+\cite{aristotle:physics}
+\section{Versuchsprotokoll}
+\section{Literatur}
+\bibliography{Literatur} 
+\bibliographystyle{ieeetr}
+
+
+\section{Anhang}
+	
+	
+	
+\end{document}
+
+
