@@ -76,6 +76,8 @@ Kaya Maria Bayer, Ketevan Gurtskaia, Alicia Hemmersbach, Danuscha Große-Hering
 	
 \item Beschreibung der Versuchsbedingungen\\
 Bei der ersten Messung werden alle Thermometer Draußen platziert, bei der zweiten Messung werden alle Thermometer Drinnen platziert.\\
+
+5 Thermometer werden morgens drinnen  während die anderen 5 Thermometer draußen messen. Nachmittags 
 \begin{itemize}
 	
 \item Die Sensoren sollen nebeneinander gestellt werden.\\
@@ -119,18 +121,29 @@ Sonne, Wind, Heizung, Klimaanlage/Ventilator, Reaktionszeit, Zustand des Thermom
 \textbf{4. Modell, Hypothesen und statistische Auswertungsmethoden}
 \begin{enumerate}[-]
 \item  Mathematische Formulierung des Modells und der Null- und Alternativ-Hypothesen \\
+\item Screening-Plan: Hat der Ort, die Tageszeit oder die Art des Sensors einen Einfluss?
+\item lineares Modell für die Haupteffekte A+B+C
+\item  $y_a$ := Messungen des Außensensores; $y_i$ := Messungen des Innensensores \\
+Lage von H0 : ya =t yi Streuung, gepaarter Zweistichproben T-Test mit (festem Ort \& fester Zeit)
 
 \item Nennung der statistischen Auswertungsmethoden inkl. der R-Funktionen. Die Darstellung soll möglichst allgemein sein und sich nicht auf den Spezialfall des Experimentes beziehen. \\
 
+\item Screening Plan: t-Test für jeden Haupteffekt über Summary(lm(...))
+\item p-Werte < $\alpha$ $\Rightarrow$ dann haben die Einflussfaktoren einen Effekt für $\alpha > 0.05$ 
 \end{enumerate}
 
 \textbf{5. Versuchsplanung}
 \begin{enumerate}[-]
 \item  Genaue Beschreibung der Versuchsplanung, d.h.
 \begin{enumerate}[*]
+	\item Zielvariable: Differenz der Sensoren: $t_{\text{innen}}-t_{\text{außen}}$
+	\item Faktoren: Ort(Drinnen/Draußen), Sensor(innen/außen), Tageszeit(morgens(4-5h)/nachmittags(16-17h))
+	\item zwischen den Messungen das Thermometer ausschalten
+	\item Versuchsplan 3 Einflussfaktoren(Art des Sensors, Ort, Tageszeit) und eine mit je zwei Stufen
 	\item Angabe, was für die Maximierung der Primärvariation( Variation der Zielvariable durch Einflussvariablen), für die Minimierung der
 	Sekundärvariation(Variation der Zielvariable durch Störvariablen) und für die Identifizierbarkeit dient.
-
+	\item Maximierung: Alle Stufenkombinationen werden getestet
+	\item Minimierung der Sekundärvariation möglichst konstant halten: Thermometer nicht in die pralle Sonne stellen, windstillen Ort, Regengeschützt
 	
 	\item Verwendung von Fachbegriffen wie Eliminierung, Konstanthaltung, Art der Verblindung, Blockbildung, Parallelisierung, Randomisierung, Umwandlung von Störvariablen, Wiederholungsmessung
 	\item Nutzen von vollständig randomisierten Plänen, randomisierten vollständigen Blockplänen, systematisch variierten vollständigen Blockplänen, geschachtelten Blockvariablen, balanzierten unvollständigen Blockplänen
