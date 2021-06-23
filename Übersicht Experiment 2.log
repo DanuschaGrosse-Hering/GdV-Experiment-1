@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.14)  21 JUN 2021 22:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.14)  23 JUN 2021 10:18
 entering extended mode
 **"./Übersicht Experiment 2.tex"
 ("Übersicht Experiment 2.tex"
@@ -730,26 +730,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
 LaTeX Warning: The counter will not be printed.
              The label is: - on input line 103.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
@@ -769,9 +754,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-[1
-
-{C:/Users/danus/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 
 LaTeX Warning: The counter will not be printed.
              The label is: - on input line 122.
@@ -781,8 +763,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
+[1
+
+{C:/Users/danus/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 26.
+
 (C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -846,11 +832,11 @@ ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14449 strings out of 479659
- 229063 string characters out of 2865431
- 784135 words of memory out of 3000000
+ 14451 strings out of 479659
+ 229083 string characters out of 2865431
+ 783135 words of memory out of 3000000
  31188 multiletter control sequences out of 15000+200000
- 433786 words of font info for 75 fonts, out of 3000000 for 9000
+ 433869 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,5n,85p,392b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
@@ -865,7 +851,7 @@ ers/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
 danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/d
 anus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/dan
 us/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on "Übersicht Experiment 2.pdf" (2 pages, 135722 bytes).
+Output written on "Übersicht Experiment 2.pdf" (2 pages, 135797 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  33 named destinations out of 1000 (max. 500000)
