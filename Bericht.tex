@@ -4,12 +4,14 @@
 \usepackage{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage{hyperref}
 \usepackage{lmodern, microtype}
 \usepackage{csquotes}
 \usepackage{hyperref}
 \usepackage{enumerate}
 
+%\usepackage[onehalfspace]{setspace}
 %Tablellen:
 \usepackage{multirow}
 \usepackage{caption}
@@ -93,14 +95,45 @@ bottom=2cm,
 \section{Einleitung}
 \section{Problemstellung und Versuchsbedingungen}
 \section{Analyse des Problems}
+%\begin{enumerate}[-]
+%	\item Was ist die interessierende abhängige Variable?
+%	Temperaturdifferenz der Innen- und Außensensoren
+%	\item Was sind interessierende Einflussvariablen und wie können diese variiert werden? \\
+%	\begin{itemize}
+%		\item wahre Temperatur (können wir nicht kontrollieren)
+%		\item können die Temperatur nicht beeinflussen, können aber die Messzeiten so anpassen, das an dem Messungen unterschiedliche Temperaturen herrschen könnten
+%		
+%		\item Ort des Thermometers: Drinnen oder Draußen
+%	\end{itemize}
+%	
+%	
+%	
+%	\item Was sind mögliche Störvariablen und welche können kontrolliert werden?\\
+%	Sonne, Wind, Heizung, Klimaanlage/Ventilator, Reaktionszeit, Zustand des Thermometers,  Tageszeit(bezogen auf unterschiedliche Temperaturen am Tag), Thermometer, Luftfeuchtigkeit, Personen im Raum,
+%	\item Von welchen Störvariablen soll noch der Einfluss erfasst werden? \\
+%	\item Welche Störvariablen sollen als Blockvariablen aufgefasst werden? \\
+%	
+%	\item die Zeit als Blockvariable (2 Stufen: Morgens/Nachmittags)
+%\end{enumerate}
+
+Die vorliegende interessierende Variable ist die Temperaturdifferenz der Innen-und Außensensoren:\\
+\begin{center}
+	$y_{\text{Differenz}} = y_{\text{AußenSensor}}-y_{\text{Innensensor}} $
+\end{center}
+
+Die wahre Temperatur ist eine Einflussvariable. Diese können wir jedoch nicht kontrollieren.  Zudem ist auch der Ort des Thermometers eine interessierende Einflussvariable, welche wir kontrollieren können. In dem Versuch werden wir zwei feste Orte festlegen: Innerhalb und Außerhalb eines Gebäudes. \\
+
+Im folgenden werden mögliche Störvariablen genannt und inwiefern man diese kontrollieren kann. Generell haben die Wetter-bzw. die Klimabedingungen einen hohen Einfluss auf den Versuch.  In geschlossenen Räumen ist dies die Nutzung einer Heizung oder Klimaanlage und die Luftfeuchtigkeit. Die Klimabedingungen im Raum werden Konstant gehalten. Das bedeutet, dass sowohl die Klimaanlage, wie auch die Heizung oder Anlagen zur Regulierung der Luftfeuchtigkeit, ausgeschaltet werden. Außerhalb eines Gebäudes fällt auch die Luftfeuchtigkeit, die Sonnenbestrahlung an dem Messort, die Windstärke, wie auch Regen. Auch diese Bedingungen möchten wir möglichst konstant halten. Dies wird umgesetzt, indem die Thermometer an windgeschützten und überdachten ohne direkter Sonnenbestrahlung platziert werden sollen. Neben diesen Wetterfaktoren, kann auch das Thermometer einen Einfluss haben. Zum einen können Messungenauigkeiten zwischen unterschiedlichen Gererätehersteller oder Modellen zusätzlich zu den Messungenauigkeiten der einzelnen Thermometer dazukommen. Dies würde dazu führen, dass unser Versuch komplizierter würde. Deswegen halten wir das Modell des Thermometers konstant. Zudem ist die Tageszeit bzgl. der unterschiedlichen Temperaaturen am Tage eine Störvariable. Durch die Variation der Messzeiten ist eine Variation der Temperatur möglich. Das bedeutet genauer: Zur Zeit des Sonnenaufgangs ist es tendenziell kälter, als zur Nachmittagszeit.\cite{WK2}. Deswegen wird die Messzeit als Blockvariable mit zwei Stufen aufgefasst. Dabei  entspricht die erste Stufe die Morgenstunden und die zweite Stufe die Nachmittagsstunden. 
+
+
+
 \section{Modell, Hypothesen und statistische Auswertungsmethoden}
 \section{Versuchsplanung}
-\cite{aristotle:physics}
 \section{Versuchsprotokoll}
 
 \section{Literatur}
 \bibliography{Literatur} 
-\bibliographystyle{ieeetr}
+\bibliographystyle{alphadin}
 
 
 \section{Anhang}
