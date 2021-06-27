@@ -71,13 +71,14 @@ Kaya Maria Bayer, Ketevan Gurtskaia, Alicia Hemmersbach, Danuscha Große-Hering
 \begin{enumerate}[-]
 \item Beschreibung der Ziele des Experimentes \\
 	Gibt es einen Unterschied ob Drinnen oder Draußen gemessen wird?\\
+	
 	Stimmen die beiden Messungen eines Geräts tendenziell überein?\\
-	Sind die Außensensoren genauso genau in der Messung wie die Innensensoren?\\ 
 	
 \item Beschreibung der Versuchsbedingungen\\
-Bei der ersten Messung werden alle Thermometer Draußen platziert, bei der zweiten Messung werden alle Thermometer Drinnen platziert.\\
 
-5 Thermometer werden morgens drinnen  während die anderen 5 Thermometer draußen messen. Nachmittags 
+In einem Zeitslot werden 3 Messungen durchgeführt, 5 davon jeweils drinnen 5 draußen.
+
+
 \begin{itemize}
 	
 \item Die Sensoren sollen nebeneinander gestellt werden.\\
@@ -85,6 +86,8 @@ Bei der ersten Messung werden alle Thermometer Draußen platziert, bei der zweit
 \item Alle Thermometer sollen im Schatten und an einem windgeschützten Ort platziert werden. Nicht in der Nähe von störenden Wärmequellen stellen. \\
 
 \item Zwischen den zwei Messungen soll eine gewisse Zeit vergangen sein.
+
+\item zur \enquote{Neutralisierung} der Thermometer werden alle zwischen den Messungen für 15 Minuten an einen Ort mit einer abweichende Temperatur gelegt, wie einen Kühlschrank.
 
 \item Die Temperatur zu den zwei Messzeiten/-Orten soll ungefähr gleich sein.
 
@@ -102,12 +105,13 @@ Bei der ersten Messung werden alle Thermometer Draußen platziert, bei der zweit
 \textbf{3. Analyse des Problems}
 \begin{enumerate}[-]
 \item Was ist die interessierende abhängige Variable?
-	die gemessene Temperatur der Außen-und Innensensoren / Temperaturdifferenz der Innen- und Außensensoren
+	 Temperaturdifferenz der Innen- und Außensensoren
 \item Was sind interessierende Einflussvariablen und wie können diese variiert werden? \\
 \begin{itemize}
-	\item wahre Temperatur
+	\item wahre Temperatur (können wir nicht kontrollieren)
+	\item können die Temperatur nicht beeinflussen, können aber die Messzeiten so anpassen, das an dem Messungen unterschiedliche Temperaturen herrschen könnten
+	
 	\item Ort des Thermometers: Drinnen oder Draußen
-	\item Art des Sensors 
 \end{itemize}
 
 
@@ -116,20 +120,24 @@ Bei der ersten Messung werden alle Thermometer Draußen platziert, bei der zweit
 Sonne, Wind, Heizung, Klimaanlage/Ventilator, Reaktionszeit, Zustand des Thermometers,  Tageszeit(bezogen auf unterschiedliche Temperaturen am Tag), Thermometer, Luftfeuchtigkeit, Personen im Raum,
 \item Von welchen Störvariablen soll noch der Einfluss erfasst werden? \\
 \item Welche Störvariablen sollen als Blockvariablen aufgefasst werden? \\
+
+\item die Zeit als Blockvariable (2 Stufen: Morgens/Nachmittags)
 \end{enumerate}
 
 \textbf{4. Modell, Hypothesen und statistische Auswertungsmethoden}
 \begin{enumerate}[-]
 \item  Mathematische Formulierung des Modells und der Null- und Alternativ-Hypothesen \\
-\item Screening-Plan: Hat der Ort, die Tageszeit oder die Art des Sensors einen Einfluss?
-\item lineares Modell für die Haupteffekte A+B+C
+
 \item  $y_a$ := Messungen des Außensensores; $y_i$ := Messungen des Innensensores \\
-Lage von H0 : ya =t yi Streuung, gepaarter Zweistichproben T-Test mit (festem Ort \& fester Zeit)
+Lage von H0 : ya =t yi Streuung,
+\item $H_0=: \mu=0$ 
+
+\item $\mu_{drinnen} - \mu_{draussen}=0$
 
 \item Nennung der statistischen Auswertungsmethoden inkl. der R-Funktionen. Die Darstellung soll möglichst allgemein sein und sich nicht auf den Spezialfall des Experimentes beziehen. \\
 
-\item Screening Plan: t-Test für jeden Haupteffekt über Summary(lm(...))
-\item p-Werte < $\alpha$ $\Rightarrow$ dann haben die Einflussfaktoren einen Effekt für $\alpha > 0.05$ 
+\item  gepaarter Zweistichproben T-Test
+
 \end{enumerate}
 
 \textbf{5. Versuchsplanung}
@@ -137,20 +145,23 @@ Lage von H0 : ya =t yi Streuung, gepaarter Zweistichproben T-Test mit (festem Or
 \item  Genaue Beschreibung der Versuchsplanung, d.h.
 \begin{enumerate}[*]
 	\item Zielvariable: Differenz der Sensoren: $t_{\text{innen}}-t_{\text{außen}}$
-	\item Faktoren: Ort(Drinnen/Draußen), Sensor(innen/außen), Tageszeit(morgens(4-5h)/nachmittags(16-17h))
+	\item Faktoren: Ort(Drinnen/Draußen)
+	\item Blockvariable: Tageszeit(morgens(4-6h)/nachmittags(16-18h))
 	\item zwischen den Messungen das Thermometer ausschalten
-	\item Versuchsplan 3 Einflussfaktoren(Art des Sensors, Ort, Tageszeit) und eine mit je zwei Stufen
+	\item Versuchsplan 1 Einflussfaktor( Ort) und eine Blockvariable(Tageszeit) mit je zwei Stufen
 	\item Angabe, was für die Maximierung der Primärvariation( Variation der Zielvariable durch Einflussvariablen), für die Minimierung der
 	Sekundärvariation(Variation der Zielvariable durch Störvariablen) und für die Identifizierbarkeit dient.
-	\item Maximierung: Alle Stufenkombinationen werden getestet
+	\item Maximierung: Randomisierung der Stufenkombination bei fehlender Vollständigkeit, Balanciert , da die Anzahl der Messungen in jeder Stufe gleich ist
 	\item Minimierung der Sekundärvariation möglichst konstant halten: Thermometer nicht in die pralle Sonne stellen, windstillen Ort, Regengeschützt
 	
 	\item Verwendung von Fachbegriffen wie Eliminierung, Konstanthaltung, Art der Verblindung, Blockbildung, Parallelisierung, Randomisierung, Umwandlung von Störvariablen, Wiederholungsmessung
-	\item Nutzen von vollständig randomisierten Plänen, randomisierten vollständigen Blockplänen, systematisch variierten vollständigen Blockplänen, geschachtelten Blockvariablen, balanzierten unvollständigen Blockplänen
+	\item Nutzen von vollständig randomisierten Plänen, randomisierten vollständigen Blockplänen, systematisch variierten vollständigen Blockplänen, geschachtelten Blockvariablen, balancierten unvollständigen Blockplänen
 	
 	\item Geben Sie genau an, mit welchen R-Funktionen, was bestimmt wurde.
 	\item Bei Bestimmung des Stichprobenumfanges soll die Vorgehensweise genau beschrieben
 	werden. 
+	
+	
 	\item Außerdem soll beschrieben werden, wer, wann, was, wie, unter welchen Bedingungen
 	untersuchen soll. Dabei reicht im Hauptteil des Berichtes, in der Präsentation und
 	im Poster die Angabe des Namens der Methode bzw. der R-Funktion, mit der
