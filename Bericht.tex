@@ -18,6 +18,7 @@
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{hhline,float}
+%\usepackage{pdfpages}
 
 %Mathematik
 \usepackage{amsmath}
@@ -93,7 +94,17 @@ bottom=2cm,
 \newpage
 
 \section{Einleitung}
+Ein Thermometer besitzen vermutlich die meisten Haushalte. Einige davon besitzen wahrscheinlich auch ein Thermometer, welches die Temperatur draußen und drinnen messen kann. Möglicherweise hat man sich bereits die Frage gestellt, worin der Unterschied zwischen dem Innen- und Außensensor dieser Thermometer liegt und ob dieser lediglich darin besteht, dass Außensensoren wetterfest sind, oder ob beide Sensoren unabhängig von weiteren äußeren Einflüssen die gleiche Temperaturen messen würden, wenn man den Innensensor nach außen und den Außensensor nach drinnen legt. \newline 
+Genau dieser Frage wird in dem folgenden Temperaturexperiment nachgegangen. Es soll überprüft werden, ob es Unterschiede bei den Messungen der beiden Sensoren drinnen und draußen gibt. \newline
+Dazu sollen mit 10 gleichen Thermometern einige Messungen drinnen und draußen durchgeführt werden. Hierbei wird dann der Unterschied der zwei gemessenen Temperaturen zwischen Innen- und Außensensor ausgewertet und mit Hilfe eines statistischen Tests interpretiert. \newline 
+Im Folgenden wird auf die Problemstellung des Experiments und die Versuchsbedingungen, dann auf die Analyse des Problems, das zugehörige statistische Modell, die Hypothesen, die statistischen Auswertungsmethoden des Experiment und die Versuchsplanung eingegangen.
 \section{Problemstellung und Versuchsbedingungen}
+Ziel des Experimentes ist es herauszufinden, ob die Messungen der Innen- und Außensensoren am selben Ort bei gleicher Temperatur übereinstimmen, oder ob es Unterschiede gibt. Außerdem soll untersucht werden, ob es einen Unterschied macht, ob draußen oder drinnen gemessen wird.\newline
+Um diese beiden Fragestellungen zu beantworten, sollen insgesamt 3 Messungen mit jeweils 10 Thermometern durchgeführt werden, sodass nach der Durchführung des Experimentes 60 Messwerte vorliegen. Dabei sollen alle Thermometer gleich alt und zudem möglichst neu sein. Außerdem dürfen die Thermometer keine sichtbaren oder bekannten Schäden haben. Die Messungen werden in 3 Zeitslots über einen Tag verteilt ohne extreme Wetterbedingungen vorgenommen, sodass in jedem Zeitslot jeweils eine ähnliche Temperatur vorliegt. Außerdem werden die Thermometer vor jeder Messung randomisiert in 2 Gruppen mit jeweils 5 Thermometern aufgeteilt. Die eine Gruppe der Thermometer misst die Temperatur draußen und die andere Gruppe der Thermometer misst die Temperatur drinnen. Der Raum, in dem drinnen gemessen wird, soll hierbei keine angeschaltete Heizung oder Klimaanlage haben. Außerdem sollen, falls vorhanden, alle Fenster geschlossen sein und derart abgedunkelt, dass keine direkte Sonneneinstrahlung, zum Beispiel durch Fenster, auf die Thermometer trifft. \newline
+Die Messungen draußen sollen an einem windgeschützten Ort ohne direkte und auch ohne gespiegelte Sonneneinstrahlung, zum Beisiel durch Wasser, stattfinden. Außerdem sollten die Thermometer an einem trockenen Ort platziert werden und es sollten andere direkte Wärmequellen mindestens 10 Meter Abstand von dem Messort haben. \newline
+Für die Messung werden die 5 Thermometer draußen und die 5 Thermometer drinnen jeweils nebeneinander auf einen ebenen identischen Tisch gelegt. Außerdem ist darauf zu achten, dass die Innen- und Außensensoren direkt nebeneinander liegen.  \newline
+Die Messungen werden in 3 Zeitslots durchgeführt. Der erste Slot ist von 6:00 - 7:00 Uhr, der zweite von 14:00 - 15:00 Uhr und der dritte Slot von 22:00 - 23:00 Uhr. Insgesamt beträgt jeder Zeitslot eine Stunde und zwischen den Slots liegen jeweils 7 Stunden. Am Abend vor der ersten Messung und nach Ende des ersten und zweiten Zeitslot werden die Thermometer  in den Kühlschrank gelegt. Somit wird die Temperatur von allen Thermometern gleichmäßig neutralisiert. Zu Beginn der drei Zeitslots werden die Thermometer von 2 Versuchsleitern aus dem Kühlschrank geholt und auf den dafür vorgesehenen Tisch gelegt. Dabei ist ein Versuchsleiter für die Thermometer draußen und ein Versuchsleiter für die Thermometer drinnen zuständig. Die Thermometer sollen jeweils 30 Minuten auf dem Tisch liegen und sich der jeweiligen Temperatur anpassen, bevor die 
+Temperaturen von den anderen beiden Versuchsleitern abgelesen und notiert werden. Auch hierbei ist ein Versuchsleiter für die Thermometer drinnen und der andere Versuchsleiter für die Thermometer draußen zuständig. Das Ablesen und notieren der Werte soll hierbei möglichst schnell passieren, damit alle 5 Werte jeweils zur gleichen tatsächlich herrschenden Temperatur abgelesen werden. In der möglicherweise verbleibenden Zeit im jeweiligen Zeitslot können die Thermometer jeweils auf den Tischen liegen bleiben, bevor sie dann nach Ablauf des Slots zurück in den Kühlschrank gelegt werden.
 \section{Analyse des Problems}
 %\begin{enumerate}[-]
 %	\item Was ist die interessierende abhängige Variable?
@@ -131,15 +142,20 @@ Im folgenden werden mögliche Störvariablen genannt und inwiefern man diese kon
 \section{Versuchsplanung}
 \section{Versuchsprotokoll}
 
-\section{Literatur}
+\newpage
+\textcolor{white}{\section{Literatur}}
 \bibliography{Literatur} 
 \bibliographystyle{alphadin}
+ 
+ \newpage
 
 
-\section{Anhang}
-	
-	
-	
+\begin{figure}[h]
+	\section{Anhang}
+	\hspace{-2.3cm}
+	\includegraphics[scale=0.8]{ErklaerungzumBericht}
+\end{figure}	
+
 \end{document}
 
 
