@@ -3,9 +3,9 @@
 \contentsline {section}{\numberline {2}Problemstellung und Versuchsbedingungen}{3}{section.2}%
 \contentsline {section}{\numberline {3}Analyse des Problems}{4}{section.3}%
 \contentsline {section}{\numberline {4}Modell, Hypothesen und statistische Auswertungsmethoden}{4}{section.4}%
-\contentsline {section}{\numberline {5}Versuchsplanung}{4}{section.5}%
-\contentsline {section}{\numberline {6}Versuchsablauf}{5}{section.6}%
-\contentsline {section}{\numberline {7}Literatur}{6}{section.7}%
-\contentsline {section}{\numberline {8}Anhang}{7}{section.8}%
-\contentsline {subsection}{\numberline {A}Aufgaben Verteilung}{7}{subsection.8.1}%
-\contentsline {subsection}{\numberline {B}Erklärung zum Bericht}{8}{subsection.8.2}%
+\contentsline {section}{\numberline {5}Versuchsplanung}{6}{section.5}%
+\contentsline {section}{\numberline {6}Versuchsablauf}{7}{section.6}%
+\contentsline {section}{\numberline {7}Literatur}{8}{section.7}%
+\contentsline {section}{\numberline {8}Anhang}{9}{section.8}%
+\contentsline {subsection}{\numberline {A}Aufgaben Verteilung}{9}{subsection.8.1}%
+\contentsline {subsection}{\numberline {B}Erklärung zum Bericht}{10}{subsection.8.2}%
