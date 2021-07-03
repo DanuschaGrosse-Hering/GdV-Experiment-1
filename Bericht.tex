@@ -51,6 +51,8 @@ bottom=2cm,
 	commentstyle=\color{DarkGreen},
 }
 
+
+
 \begin{document}
 	
 	
@@ -127,11 +129,52 @@ Im folgenden werden mögliche Störvariablen genannt und inwiefern man diese kon
 Zusammengefasst sollen die meisten Störvariablen möglichst konstant gehalten werden und somit soll dessen Einfluss nicht erfasst werden. Jedoch können wir sie Messzeiten beeinflussen.  \\
 
 %Welche Störvariablen sollen als Blockvariablen aufgefasst werden?
-Durch die Variation der Messzeiten ist eine Variation der Temperatur möglich. Das bedeutet genauer: Zur Zeit des Sonnenaufgangs ist es tendenziell kälter, als zur Nachmittagszeit.\cite{WK2}. Deswegen wird die Messzeit als Blockvariable mit zwei Stufen aufgefasst. Dabei  entspricht die erste Stufe die Morgenstunden und die zweite Stufe die Nachmittagsstunden. 
+Durch die Variation der Messzeiten ist eine Variation der Temperatur möglich. Das bedeutet genauer: Zur Zeit des Sonnenaufgangs ist es tendenziell kälter, als zur Nachmittagszeit. \cite{WK2}. Deswegen wird die Messzeit als Blockvariable mit zwei Stufen aufgefasst. Dabei  entspricht die erste Stufe die Morgenstunden und die zweite Stufe die Nachmittagsstunden. 
 
 
 
 \section{Modell, Hypothesen und statistische Auswertungsmethoden}
+Nach der Durchführung des Experiments liegen die Versuchsergebnisse zur Auswertung vor. \\
+60 Messwerte der Innensensoren:  $ V^a_{1}, ...V^a_{30}, V^i_{31}, ... V^i_{60} $   \\
+60 Messwerte der Außensensoren:  $ W^a_1, ...W^a_{30},W^i_{31},..., W1 i_{60} $ \\
+wobei $a \hat{=}$ Messungen außerhalb des Gebäudes,   $i \hat{=} $ Messungen im Gebäude, jeweils 30 Beobachtungen für alle vier Kombinationen $\{$Außensensor, Innensensor$\} \times \{$Draußen, Drinnen$\} $. Stichprobenumfang n ist 60, Versuchsumfang N ist $2 \cdot n =120 $. \\
+Da es in diesem Experiment sich um verbundene Stichproben handelt (die Paare $ ( V_j, W_j ), j = 1,...60 $ sind bivariate Zufallsvektoren von Messungen der Innen- und Außensensoren eines Thermometers), werden die Differenzen $ X_j := W_j - V_j,$ mit  $j = 1, .., 60, $, unter der Voraussetzung, dass die Einzelwerte repräsentativ für die beiden Arten des Sensors sind, betrachtet(für die erste Fragestellung ist es nicht relevant, wo die Messung stattgefunden hat, deswegen werden hier die Ortindikatoren ''a'' und ''i'' weggelassen). \\
+Die erste Fragestellung ist ob die Messungen der Innen- und Außensensoren übereinstimmen \\
+Bevor der Haupttest durchgeführt wird, muss man die Normalverteilungsannahme ( $ H_0: X_j  \sim N( \mu , \sigma_1^2 )$ gegen $H_1:$ Es liegt keine Normalverteilung vor) zum Niveau $ \alpha = 0.05 $  überprüfen. Dies geschieht mit dem Shapiro-Wilk Test in R:
+\begin{lstlisting}
+shapiro.test(W - V)
+\end{lstlisting}
+Ist der P-Wert größer 5\%, so spricht nichts gegen die Normalverteilung, das ist aber auch kein Beweis dafür, dass Z normal verteilt ist. Trotzdem kann man mit der Annahme weiter arbeiten. \\ 
+Als nächstes wird einen weiteren Vortest, diesmal auf Varianzhomogenität gemacht. Sei $\sigma^2_1 $ die Varianz von V und $\sigma^2_2 $ die Varianz von W, dann ist  
+$ H_0: \sigma^2_1 = \sigma^2_2  $ gegen $ H_0: \sigma^2_1 \neq \sigma^2_2  $ in R mit: \begin{lstlisting}
+var.test(V, W)$p.value
+\end{lstlisting}
+Für die Hauptfragestellung betrachtet man die Differenz zwischen den Beiden Stichprobenmittelwerten (in der Versuchsplanung heißt diese Differenz ''Effekt'' \cite{1}).
+$\mu = \mu_2 - \mu_1 $, mit $ \mu_1 $ al Mittelwert von V und $ \mu_2 $ von W. Folgende Hypothesen werden getestet:
+$ H_0: \mu = 0 $ bzw. $ \mu_1 = \mu_2 $ gegen $ H_1: \mu \neq 0 $ bzw. $ \mu_1 \neq \mu_2 $. Mit $ \overline{X}= n^{-1}\sum^n_{j=1}X_j $ist die Teststatistik 
+$ T_n := \frac{\sqrt{n}\overline{X}}{\sqrt{(n-1)^{-1}\sum^n_{j = 1} (X_j - \overline{X}) ^2}} $.Die Ablehnung von $H_0 $ zum Niveau $\alpha $ erfolgt genau dann, wenn $ |T_n| \geq t_{n-1;1-\alpha/2} $ gilt \cite{2}. In R verwendet man den zweiseitigen Zweistichproben-t-Test: 
+\begin{lstlisting}
+t.test(W, V, paired = TRUE, var.equal = TRUE)
+\end{lstlisting}
+falls die Varianzhomogenität nicht abgelehnt wurde und 
+\begin{lstlisting}
+t.test(W, V, paired = TRUE, var.equal = FALSE)
+\end{lstlisting} falls die Daten signifikant gegen die Gleichheit der Varianzen sprechen. Es ist wichtig anzugeben (mit paired = TRUE), dass es sich um gepaarte Stichproben handelt, da sonst die Ergebnisse verzerrt werden können, was zu Fehlinterpretation führen kann.\\
+Wird mit dem Shapiro-Wilk Test die Normalverteilungsannahme abgelehnt, so wird ein Lage-Vergleichstest durchgeführt. Mit dem zweiseitigen Zweistichproben-Wilcoxon-Rang-Test werden dann die Hypothesen $ H_0: med_i = med_a $ bzw. $ med_a - med_i = 0 $ gegen $H_1: med_i \neq med_a $ bzw. $ med_a - med_i \neq 0 $ zum Niveau $\alpha = 0.05 $ getestet. In R mit: \begin{lstlisting}
+wilcox.test(W-V)$p.value
+\end{lstlisting}
+Ist der P-Wert des Haupttests kleiner $5\% $, so liegt einen signifikanten Unterschied zwischen den Messungen der Innen- und Außensensoren vor.Falls aber der P-Wert größer 0.05 ist,kann die Nullhypothese nicht abgelehnt werden, nichts spricht gegen die Annahme, dass die Messwerte von den beiden Sensoren übereinstimmen. \\
+Die zweite Fragestellung des Experiments ist, ob es einen Unterschied gibt, wenn Messungen im Gebäude und außerhalb des Gebäudes durchgeführt werden. Diese Frage wird mittels einfacher Varianzanalyse beantwortet. Hier betrachtet man der Einfluss nur eines qualitativen Faktors $A $, also die einfache Varianzanalyse. Außerdem hat der Faktor $A $ genau 2 Stufen (Drinnen und Draußen) und es liegt ein Modell mit festen Effekten vor \cite{3}. Interessierende Beobachtungen sind  die Differenzen zwischen den Innen- und Außensensoren $X_{11} := W^a_1 - V^a_1, ..., X_{1 30} := W^a_{30} - V^a_{30} $ und $X_{21} := W^i_{31} - V^i_{31}, ..., X_{2 30} := W^i_{60} - V^i_{60}  $. \\ Die Modellgleichung hat die Form: $ X_{ij} = \mu + a_i + e_{ij}  $ mit $ i = 1, 2, j = 1,...., 30, $. $a_i $ sind die Hauptwirkungen der Faktorstufen $A_i $ wobei $ A_1 \hat{=} $ Messungen außerhalb des Gebäudes, $ A_2 \hat{=} $Messungen im Gebäude. Das Modell wird durch die folgenden Nebenbedingungen vervollständigt; Die Fehler ($e_{ij} $ sind voneinander unabhängig mit Erwartungswert $E(e_{ij}) = 0 $ und Varianz $var(e_{ij} ) = \sigma^2 $, die Summe der $a_i $ ist gleich 0 \cite{3}. Um die einfache Varianzanalyse durchzuführen, muss man zwei Voraussetzungen überprüfen. Die Messungen $X_{ij} $  müssen Normalverteilung für jede Stufe $i = 1, 2 $ besitzen.Das kann wie für den t-Test mit dem Shapiro-Wilk-Test für $X_1 $ und $X_2 $ getan werden. $X_1 := (X_{11}, ..., X_{1 30})^T $, $ X_2 := (X_{21}, ..., X_{2 30})^T $ und $X := (X_1 X_2)^T $. Die zweite Voraussetzung ist die Gleichheit der Varianzen. Falls eine Normalverteilung für jede Stufe angenommen werden kann, kann die Homogenität der Varianzen mittels des Bartlett-Tests getestet werden  \cite{4}. Sei Ort $:= (1,...,1,2,...,2)^T $, dann ist der Test in R: \begin{lstlisting}
+bartlett.test(X ~ Ort)
+\end{lstlisting}
+Die Hypothesen für die Hauptfragestellung sind: $ H_0: a_1 = a_2 = 0 $ bzw. Faktor A hat keinen Einfluss auf die Variable X  vs.  $H_1: a_1 \neq a_2 $ bzw. Faktor A hat Einfluss auf die Variable X. Sind beide Voraussetzungen erfüllt, so kann man der ANOVA-Test anwenden.\begin{lstlisting}
+anova(lm(X~Ort))
+\end{lstlisting}  
+Ist die Hypothese der Normalverteilung bei allen Stufen abgelehnt worden oder die Hypothese der Gleichheit der Varianzen wird abgelehnt, so kann der ANOVA-Test nicht benutzt werden. Als Alternative wird der verteilungsfreie Kruskal-Wallis-Test, welcher den Wilcoxon-Rang-Summen-Test verallgemeinert, verwendet \cite{4}.
+\begin{lstlisting}
+kruskal.test(lm(X~Ort))
+\end{lstlisting}
+Ist der P-Wert des ANOVA- bzw. Kruskal-Wallis-Tests kleiner als 0.05, so kann man schließen, dass der Ort der Messungen einen signifikanten Einfluss auf die Differenzen zwischen den Messwerte der Außen- und Innensensoren haben. Ist der P-Wert aber größer als 0.05, so kann die Nullhypothese nicht abgelehnt werden, was aber kein Beweis dafür ist, dass es keinen Einfluss des Faktors auf die Beobachtungen gibt, eventuell liegen zu wenig Daten vor.
 \section{Versuchsplanung}
 
 \newpage
@@ -181,7 +224,10 @@ Zunächst muss bestimmt werden, welche Personen Innen/Außen die Thermometer auf
 \end{table}
 \newpage
 \textcolor{white}{\section{Literatur}}
-\bibliography{Literatur} 
+\bibliography{Literatur}
+
+
+
 \bibliographystyle{alphadin}
  
  \newpage
