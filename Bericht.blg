@@ -1,55 +1,68 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Bericht.aux
-Reallocating 'name_of_file' (item size: 1) to 10 items.
 Reallocating 'name_of_file' (item size: 1) to 9 items.
-The style file: alphadin.bst
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Database file #1: Literatur.bib
-Warning--to sort, need author or key in WK2
-You've used 5 entries,
-            4793 wiz_defined-function locations,
-            910 strings with 6847 characters,
-and the built_in function-call counts, 2234 in all, are:
-= -- 216
-> -- 50
-< -- 62
-+ -- 68
-- -- 16
-* -- 117
-:= -- 388
-add.period$ -- 5
-call.type$ -- 5
-change.case$ -- 21
-chr.to.int$ -- 5
-cite$ -- 7
-duplicate$ -- 77
-empty$ -- 177
-format.name$ -- 34
-if$ -- 448
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 22
-newline$ -- 35
-num.names$ -- 12
-pop$ -- 36
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Bericht-blx.bib
+Database file #2: Literatur.bib
+Biblatex version: 3.16
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 6 entries,
+            6393 wiz_defined-function locations,
+            1221 strings with 9537 characters,
+and the built_in function-call counts, 24741 in all, are:
+= -- 1631
+> -- 519
+< -- 215
++ -- 489
+- -- 156
+* -- 1461
+:= -- 2275
+add.period$ -- 0
+call.type$ -- 6
+change.case$ -- 134
+chr.to.int$ -- 44
+cite$ -- 10
+duplicate$ -- 2496
+empty$ -- 2378
+format.name$ -- 221
+if$ -- 5421
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 0
+newline$ -- 129
+num.names$ -- 264
+pop$ -- 1728
 preamble$ -- 1
-purify$ -- 31
+purify$ -- 145
 quote$ -- 0
-skip$ -- 136
+skip$ -- 1071
 stack$ -- 0
-substring$ -- 116
-swap$ -- 12
-text.length$ -- 9
-text.prefix$ -- 3
-top$ -- 0
-type$ -- 38
-warning$ -- 1
-while$ -- 15
-width$ -- 7
-write$ -- 63
-(There was 1 warning)
+substring$ -- 2515
+swap$ -- 651
+text.length$ -- 144
+text.prefix$ -- 5
+top$ -- 1
+type$ -- 192
+warning$ -- 0
+while$ -- 303
+width$ -- 0
+write$ -- 124
