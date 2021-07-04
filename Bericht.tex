@@ -10,6 +10,22 @@
 \usepackage{csquotes}
 \usepackage{hyperref}
 \usepackage{enumerate}
+%\usepackage[numbers,round]{natbib}
+\usepackage[backend=bibtex,               % biber als Sortierprogramm (bibtex)
+sortlocale=de,               % deutsche Sortierung (Sonderzeichen)
+abbreviate=false,            % keine Abkürzungen benutzen
+natbib=true,                 % natbib-ähnliche Befehle verfügbar
+bibstyle=authortitle,        % Stil ohne Label, z.B. [1]
+citestyle=authoryear,        % Autor-Jahr-Zitate
+language=auto,               % Hauptsprache des Dokuments
+babel=other,                 % berücksichtigt hyphenation-Feld in der .bib
+maxcitenames=2,              % ab 2 Namen et al. bzw. u.a.
+maxbibnames=10,              % ab 10 Namen im Verzeichnis et al. bzw. u.a.
+block=nbpar,                 % Quallenangabe als Block je item
+isbn=false,                  % keine ISBN
+url=true,                   % keine URL
+doi=false,                   % keine DOI
+eprint=false]{biblatex}
 
 %\usepackage[onehalfspace]{setspace}
 %Tablellen:
@@ -52,6 +68,9 @@ bottom=2cm,
 }
 
 
+
+%\bibliographystyle{natstat} 
+\addbibresource{Literatur.bib} 
 
 \begin{document}
 	
@@ -223,13 +242,7 @@ Zunächst muss bestimmt werden, welche Personen Innen/Außen die Thermometer auf
 	\end{tabular}
 \end{table}
 \newpage
-\textcolor{white}{\section{Literatur}}
-\bibliography{Literatur}
 
-
-
-\bibliographystyle{alphadin}
- 
  \newpage
 
 \renewcommand{\thesubsection}{\Alph{subsection}}
@@ -237,6 +250,9 @@ Zunächst muss bestimmt werden, welche Personen Innen/Außen die Thermometer auf
 
 \section{Anhang}
 
+\subsection{Literatur}
+%\bibliography{Literatur}
+\printbibliography
 \subsection{Aufgaben Verteilung} \label{Verteilung}
 \begin{lstlisting}
 	Versuchsleiterin <- c("K.Bayer","A.Hemmersbach","D.Grosse-Hering","K.Gurtskaia")
