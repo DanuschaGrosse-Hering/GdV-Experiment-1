@@ -221,22 +221,23 @@ bottom=2cm,
 	\section{Versuchsplanung}
 	Bei dem Versuchsplan handelt es sich um einen vollständig randomisierten $2^3$ Plan mit einer Blockvariablen. Es werden insgesamt sechs Messungen durchgeführt, welche gleichmäßig auf zwei Zeitblöcke aufgeteilt werden. Innerhalb dieser beiden Zeitblöcke werden jeweils drei aufeinander folgende Messungen mit jeweils 10 Thermometern durchgeführt, welche durch Randomsierung gleichmäßig auf die Messorte verteilt werden. Der Messort dient als Einflussfaktor mit zwei Stufen, die im Plan als inside und outside codiert wurden. Zur Erstellung des Plans wird jede Messung als eigener Einflussfaktor mit jeweils zwei Stufen betrachtet und somit für jede Durchführung neu randomisiert. Es ergibt sich somit für die beiden Zeitblöcke (4-6 Uhr bzw. 16-18 Uhr) jeweils ein vollständig randomisierter $2^3$ Plan. Dabei handelt es sich nicht um einen vollständigen Veruchsplan, da nicht zwingend jede Stufenkombination gleich häufig auftreten soll. Die Maximierung der Primärvariation soll durch die Randomisierung der Messorte der einzelnen Thermometer und die gleichmäßige Aufteilung der Thermometer über die Blöcke sowie über die Faktorstufen erreicht werden. \\
 
-\noindent Die Einteilung der Messungen in zwei Zeitblöcke dient der Kontrolle der Sekundärvariation, indem der Einfluss möglicher größerer Schwankungen der Außentemperatur auf die Qualität der Messergebnisse berücksichtigt wird. Die Messungen sollen jeweils um die für gewöhnlich kühlste (4 bis 6 Uhr früh), beziehungsweise wärmste Tageszeit (16-18 Uhr) eines Tages durchführt werden und so eventuelle Schwankungen möglichst vollständig abdecken.\\
+ Die Einteilung der Messungen in zwei Zeitblöcke dient der Kontrolle der Sekundärvariation, indem der Einfluss möglicher größerer Schwankungen der Außentemperatur auf die Qualität der Messergebnisse berücksichtigt wird. Die Messungen sollen jeweils um die für gewöhnlich kühlste (4 bis 6 Uhr früh), beziehungsweise wärmste Tageszeit (16-18 Uhr) eines Tages durchführt werden und so eventuelle Schwankungen möglichst vollständig abdecken.\\
 
-\noindent Des weiteren sollten zuvor genannte äußere Einflüsse, die mögliche Störvariablen darstellen, so gut wie möglich konstant gehalten, beziehungsweise stärkere Einflüsse wie zum Beispiel Regen und direkte Sonneneinstrahlung eliminiert werden. Innerhalb jeder Messrunde ist außerdem eine Konstanthaltung äußerer Einflüsse durch die zeitgleiche Platzierung der Thermometer am selben Ort gegeben. Die Platzierung der Thermometer im Kühlschrank vor jeder Messung sowie die Einhaltung der Wartezeit von 20 Minuten sorgen ebenfalls für eine Konstanthaltung der Startbedingungen bei den verschiedenen Messdurchgängen.
+ Des weiteren sollten zuvor genannte äußere Einflüsse, die mögliche Störvariablen darstellen, so gut wie möglich konstant gehalten, beziehungsweise stärkere Einflüsse wie zum Beispiel Regen und direkte Sonneneinstrahlung eliminiert werden. Innerhalb jeder Messrunde ist außerdem eine Konstanthaltung äußerer Einflüsse durch die zeitgleiche Platzierung der Thermometer am selben Ort gegeben. Die Platzierung der Thermometer im Kühlschrank vor jeder Messung sowie die Einhaltung der Wartezeit von 20 Minuten sorgen ebenfalls für eine Konstanthaltung der Startbedingungen bei den verschiedenen Messdurchgängen.\\
 
 
-\noindent Die Beantwortung der Hauptfragestellung soll, wie zuvor dargestellt, mit einem beidseitigen Zweistichproben-t-Test erfolgen. Für das Testniveau alpha=0.05 und delta=1, ergibt sich die im Folgenden dargestellte Abhängigkeit zwischen der Wahrscheinlichkeit für einen Fehler 2. Art und dem Stichprobenumfang n \ref{Stichprobenumfang}: \\
-
-\begin{figure}[h]
+ Die Beantwortung der Hauptfragestellung soll, wie zuvor dargestellt, mit einem beidseitigen Zweistichproben-t-Test erfolgen. Für das Testniveau alpha=0.05 und delta=1, ergibt sich die im Folgenden dargestellte Abhängigkeit zwischen der Wahrscheinlichkeit für einen Fehler 2. Art und dem Stichprobenumfang n [\ref{Stichprobenumfang}] : \\
+ 
+\newpage
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.7]{Stichprobenumfang.png}
 
 \end{figure} 
+ 
+ Bei sechs Messungen mit jeweils 10 Thermometern ergibt sich ein Stichprobenumfang von N=60, für welchen die Wahrscheinlichkeit für einen Beta-Fehler deutlich unter dem Wert von 0.2 liegt und welcher somit gerechtfertigt ist. \\
 
-\noindent Bei sechs Messungen mit jeweils 10 Thermometern ergibt sich ein Stichprobenumfang von N=60, für welchen die Wahrscheinlichkeit für einen Beta-Fehler deutlich unter dem Wert von 0.2 liegt und welcher somit gerechtfertigt ist. \\
-
-\noindent Der Erstellung des Plans \ref{Plan} erfolgte mit der Funktion design.crd() aus dem R-Paket \enquote{agricolae}. Für jede der sechs Messungen wurde ein vollständig randomisierter Plan erstellt, wobei, wie oben beschrieben, jeweils 10 Thermometer auf die zwei Faktorstufen \enquote{inside} und \enquote{outside} aufgeteilt wurden. Für jede Durchführung wurde ein anderer Seed gesetzt und die sechs resultierenden Pläne schließlich der Reihenfolge nach auf die zwei Zeitblöcke aufgeteilt. 
+ Der Erstellung des Plans [\ref{Plan}] erfolgte mit der Funktion design.crd() aus dem R-Paket \enquote{agricolae}. Für jede der sechs Messungen wurde ein vollständig randomisierter Plan erstellt, wobei, wie oben beschrieben, jeweils 10 Thermometer auf die zwei Faktorstufen \enquote{inside} und \enquote{outside} aufgeteilt wurden. Für jede Durchführung wurde ein anderer Seed gesetzt und die sechs resultierenden Pläne schließlich der Reihenfolge nach auf die zwei Zeitblöcke aufgeteilt. 
 
 
 
