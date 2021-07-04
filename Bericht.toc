@@ -17,10 +17,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A}Literatur}{9}{subsection.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B}R-Code zum Versuchsplan}{10}{subsection.7.2}%
+\contentsline {subsection}{\numberline {B}R-Code zum Versuchsplan}{9}{subsection.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C}Bestimmung der Stichprobengröße}{10}{subsection.7.3}%
+\contentsline {subsection}{\numberline {C}Bestimmung der Stichprobengröße}{9}{subsection.7.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {D}Aufgaben Verteilung}{10}{subsection.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {E}Erklärung zum Bericht}{12}{subsection.7.5}%
+\contentsline {subsection}{\numberline {E}Erklärung zum Bericht}{11}{subsection.7.5}%
