@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2021.7.2)  4 JUL 2021 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2021.7.2)  4 JUL 2021 15:33
 entering extended mode
 **./Bericht.tex
 (Bericht.tex
@@ -399,10 +399,6 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 (C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
-Package biblatex Info: Trying to load biblatex citestyle data model...
-Package biblatex Info: ... file 'authoryear.dbx' not found.
-Package biblatex Info: Trying to load biblatex bibstyle data model...
-Package biblatex Info: ... file 'authortitle.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count323
@@ -529,12 +525,12 @@ File: blx-natbib.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
  overwriting.
 )
-Package biblatex Info: Trying to load bibliography style 'authortitle'...
-Package biblatex Info: ... file 'authortitle.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
 
-(C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authortitl
-e.bbx
-File: authortitle.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+(C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
@@ -544,19 +540,23 @@ File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count400
 \c@bbx:relatedtotal=\count401
 ))
-Package biblatex Info: Trying to load citation style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.cbx' found.
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
 
-(C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\authoryear
-.cbx
-File: authoryear.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
+(C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cb
+x
+File: numeric.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -852,7 +852,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 75
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 76
 .
 
 (C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
@@ -871,25 +871,25 @@ LaTeX Warning: Unused global option(s):
 (Bericht.aux)
 \openout1 = `Bericht.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-Package hyperref Info: Link coloring OFF on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+Package hyperref Info: Link coloring OFF on input line 76.
 
 (C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -903,21 +903,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count440
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
  (Bericht.out) (Bericht.out)
 \@outlinefile=\write4
 \openout4 = `Bericht.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 75.
+LaTeX Info: Redefining \microtypecontext on input line 76.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 75.
+LaTeX Info: Redefining \showhyphens on input line 76.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -970,23 +970,10 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 \openout3 = `Bericht-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-
-
-! Package biblatex Error: File 'Bericht.bbl' not created by biblatex.
-
-See the biblatex package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 \begin{document}
-                     
-This file was apparently not created by biblatex. Rename it or
-move it to a location were TeX will not find it. If this error
-persists, consider redefining \blxauxsuffix.See the biblatex
-manual for details.
-
-Package biblatex Info: Reference section=0 on input line 75.
-Package biblatex Info: Reference segment=0 on input line 75.
+Package biblatex Info: ... file 'Bericht.bbl' found.
+ (Bericht.bbl)
+Package biblatex Info: Reference section=0 on input line 76.
+Package biblatex Info: Reference segment=0 on input line 76.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
@@ -1115,30 +1102,27 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
-
-
-LaTeX Warning: Citation 'WK2' on page 4 undefined on input line 151.
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-63.
+64.
 (C:\Users\danus\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1147,30 +1131,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [4]
-
-LaTeX Warning: Citation '1' on page 5 undefined on input line 171.
-
-
-LaTeX Warning: Citation '2' on page 5 undefined on input line 174.
-
-
-LaTeX Warning: Citation '3' on page 5 undefined on input line 186.
-
-
-LaTeX Warning: Citation '3' on page 5 undefined on input line 186.
-
-
-LaTeX Warning: Citation '4' on page 5 undefined on input line 186.
-
-
-LaTeX Warning: Citation '4' on page 5 undefined on input line 192.
-
 [5] [6] [7]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10'.
+(microtype)             Ignoring protrusion settings for this character.
 
-LaTeX Warning: Empty bibliography on input line 255.
-
-
-Overfull \hbox (26.93263pt too wide) in paragraph at lines 258--260
+Overfull \hbox (4.25246pt too wide) in paragraph at lines 264--266
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][] 
@@ -1180,71 +1146,56 @@ Overfull \hbox (26.93263pt too wide) in paragraph at lines 258--260
 
 pdfTeX warning: pdflatex.exe (file ./ErklaerungzumBericht.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<ErklaerungzumBericht.pdf, id=118, 597.55246pt x 845.07718pt>
+<ErklaerungzumBericht.pdf, id=131, page=1, 597.55246pt x 845.07718pt>
 File: ErklaerungzumBericht.pdf Graphic file (type pdf)
-<use ErklaerungzumBericht.pdf>
-Package pdftex.def Info: ErklaerungzumBericht.pdf  used on input line 289.
+<use ErklaerungzumBericht.pdf, page 1>
+Package pdftex.def Info: ErklaerungzumBericht.pdf , page1 used on input line 29
+5.
 (pdftex.def)             Requested size: 478.04262pt x 676.06267pt.
 
-LaTeX Warning: Float too large for page by 27.12611pt on input line 290.
-
-! Undefined control sequence.
-<argument> \blx@bbl@mdfivesum@new 
-                                  
-l.293 \end{document}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Float too large for page by 27.12611pt on input line 296.
 
 [8] [9 <./ErklaerungzumBericht.pdf>] (Bericht.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Bericht.out' has not changed.
 (rerunfilecheck)             Checksum: 376436C9D1F88D8497BAB57A2CFC86BC;1549.
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                Bericht
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Bericht.run.xml'.
 \openout1 = `Bericht.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25609 strings out of 478847
- 424618 string characters out of 2848387
- 1118928 words of memory out of 3000000
- 42991 multiletter control sequences out of 15000+600000
- 461100 words of font info for 124 fonts, out of 8000000 for 9000
+ 25672 strings out of 478847
+ 426027 string characters out of 2848387
+ 1123876 words of memory out of 3000000
+ 43039 multiletter control sequences out of 15000+600000
+ 468856 words of font info for 130 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 72i,9n,80p,1902b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
-c}{C:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
-:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C
-:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C
-:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Us
+ 72i,9n,80p,1903b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
+:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C
+:/Users/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
+ers/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Us
+ers/danus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Us
 ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Us
 ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Us
-ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Us
-ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Us
-ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Use
-rs/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/User
-s/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users
-/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/
-danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/da
-nus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/danu
-s/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/danus/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/danus/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/danus/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/danus/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Bericht.pdf (9 pages, 428050 bytes).
+ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/U
+sers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/U
+sers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/U
+sers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Us
+ers/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Use
+rs/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/User
+s/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users
+/danus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/d
+anus/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/dan
+us/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/danus
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/danus
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/danus
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/danus/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/danus/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/danus/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on Bericht.pdf (9 pages, 468601 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 34390 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 38998 words of extra memory for PDF output out of 42996 (max. 10000000)
 
