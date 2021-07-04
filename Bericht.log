@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.17)  4 JUL 2021 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.17)  4 JUL 2021 18:38
 entering extended mode
 **./Bericht.tex
 (Bericht.tex
@@ -1137,7 +1137,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [4]
 [5]
-<Stichprobenumfang.png, id=117, 483.30562pt x 246.9225pt>
+<Stichprobenumfang.png, id=127, 483.30562pt x 246.9225pt>
 File: Stichprobenumfang.png Graphic file (type png)
 <use Stichprobenumfang.png>
 Package pdftex.def Info: Stichprobenumfang.png  used on input line 210.
@@ -1151,8 +1151,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--212
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
+ [9]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 315.
+nput line 316.
  (versuchsplan_temp.R)
 (stichprobengroesse.R
 Overfull \hbox (242.3943pt too wide) in paragraph at lines 8--9
@@ -1162,8 +1163,8 @@ Overfull \hbox (242.3943pt too wide) in paragraph at lines 8--9
 ][][][][][][][][] 
  []
 
-) [9]
-Overfull \hbox (4.25246pt too wide) in paragraph at lines 325--327
+)
+Overfull \hbox (4.25246pt too wide) in paragraph at lines 326--328
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][] 
@@ -1173,36 +1174,27 @@ Overfull \hbox (4.25246pt too wide) in paragraph at lines 325--327
 
 pdfTeX warning: pdflatex (file ./ErklaerungzumBericht.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
-<ErklaerungzumBericht.pdf, id=176, page=1, 597.55246pt x 845.07718pt>
+<ErklaerungzumBericht.pdf, id=157, page=1, 597.55246pt x 845.07718pt>
 File: ErklaerungzumBericht.pdf Graphic file (type pdf)
 <use ErklaerungzumBericht.pdf, page 1>
 Package pdftex.def Info: ErklaerungzumBericht.pdf , page1 used on input line 35
-6.
+7.
 (pdftex.def)             Requested size: 478.04262pt x 676.06267pt.
 
-LaTeX Warning: Float too large for page by 27.12611pt on input line 357.
+LaTeX Warning: Float too large for page by 27.12611pt on input line 358.
 
-[10] [11 <./ErklaerungzumBericht.pdf>] (Bericht.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Bericht.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Bericht.out':
-(rerunfilecheck)             Before: 376436C9D1F88D8497BAB57A2CFC86BC;1549
-(rerunfilecheck)             After:  183AE1DD423FEB85680B1DA25AA8ABF6;1953.
+[10] [11] [12 <./ErklaerungzumBericht.pdf>] (Bericht.aux)
+Package rerunfilecheck Info: File `Bericht.out' has not changed.
+(rerunfilecheck)             Checksum: 183AE1DD423FEB85680B1DA25AA8ABF6;1953.
 Package logreq Info: Writing requests to 'Bericht.run.xml'.
 \openout1 = `Bericht.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25527 strings out of 479283
- 422065 string characters out of 2854882
- 1139998 words of memory out of 3000000
- 42376 multiletter control sequences out of 15000+600000
+ 25530 strings out of 479283
+ 422104 string characters out of 2854882
+ 1160998 words of memory out of 3000000
+ 42378 multiletter control sequences out of 15000+600000
  469271 words of font info for 135 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  83i,9n,88p,1903b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1229,9 +1221,9 @@ ci/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/alici
 AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/alici/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/alici/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Bericht.pdf (11 pages, 470801 bytes).
+Output written on Bericht.pdf (12 pages, 472328 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 105 named destinations out of 1000 (max. 500000)
- 39003 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 39019 words of extra memory for PDF output out of 42996 (max. 10000000)
 
