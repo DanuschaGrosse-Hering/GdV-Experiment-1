@@ -1,5 +1,55 @@
-[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
-[1] Config.pm:315> INFO - Logfile is 'Bericht.blg'
-[291] biber-MSWIN64:330> INFO - === 
-[1409] Utils.pm:411> ERROR - Cannot find 'Bericht.bcf'!
-[1409] Biber.pm:132> INFO - ERRORS: 1
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Bericht.aux
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: alphadin.bst
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Literatur.bib
+Warning--to sort, need author or key in WK2
+You've used 5 entries,
+            4793 wiz_defined-function locations,
+            910 strings with 6847 characters,
+and the built_in function-call counts, 2234 in all, are:
+= -- 216
+> -- 50
+< -- 62
++ -- 68
+- -- 16
+* -- 117
+:= -- 388
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 21
+chr.to.int$ -- 5
+cite$ -- 7
+duplicate$ -- 77
+empty$ -- 177
+format.name$ -- 34
+if$ -- 448
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 22
+newline$ -- 35
+num.names$ -- 12
+pop$ -- 36
+preamble$ -- 1
+purify$ -- 31
+quote$ -- 0
+skip$ -- 136
+stack$ -- 0
+substring$ -- 116
+swap$ -- 12
+text.length$ -- 9
+text.prefix$ -- 3
+top$ -- 0
+type$ -- 38
+warning$ -- 1
+while$ -- 15
+width$ -- 7
+write$ -- 63
+(There was 1 warning)
