@@ -1,0 +1,25 @@
+---
+title: "Auswertung des Helikopterexperiments"
+author: "Danuscha Große-Hering"
+date: "05.Juli 2021"
+output: pdf_document
+---
+```{r}
+setwd("C:\\Users\\danus\\OneDrive\\Uni\\4.Semester\\Grundlagen der Versuchspalnung\\1.Experiment\\GdV-Experiment-1\\Experiment 3")
+```
+
+# Versuchsablauf
+
+# Screening
+
+```{r}
+Screening <- read.csv("Screening.CSV", sep = ";")
+```
+
+
+
+# Optimierung
+```{r}
+Optimierung <-read.csv("Optimierung.CSV", sep = ";")
+```
+
