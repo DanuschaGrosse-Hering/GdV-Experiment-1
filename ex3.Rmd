@@ -1,5 +1,5 @@
 ---
-title: "Screening"
+title: "Screening Plan"
 author: "Ketevan Gurtskaia"
 output: pdf_document
 ---
@@ -196,7 +196,5 @@ Block :1 = Zeichnen:Danuscha, basteln:Keti, Werfen:Danuscha, Zeit stoppen : Keti
 		 
 	
 
-	
-	
-	
+
 		 
