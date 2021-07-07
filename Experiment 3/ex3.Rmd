@@ -133,21 +133,38 @@ RandomExperiment = ExperimentDesign[order(ExperimentDesign$ord), ]
 
 	
 
-	Draußen? Wind, Temperatur, Regen, Luftfeuchtigkeit können Störfaktoren sein \newline
-	Drinnen? keine Heizung / Klimatisierung / Ventilator usw. Keine unnötige Bewegungen. Fenster & Tur zu oder öffen?. \newline
-	Werfen: Wo & Wie wird geworfen ?
+Draußen? Wind, Temperatur, Regen, Luftfeuchtigkeit können Störfaktoren sein \newline
+Drinnen? keine Heizung / Klimatisierung / Ventilator usw. Keine unnötige Bewegungen. Fenster & Tur zu oder öffen?. \newline
+Werfen: Wo & Wie wird geworfen ?
 	
-z.B :Blöcke von  Versuchsleiterinnen? \\
-Helikopter: 1-16: \newline
-Danuscha zeichnet & Keti schneidet und faltet das Helikopter \newline
-Danuscha wirft und Keti stoppt die Zeit \newline
+Wenn alle an dem Screening beteidigt sind:
+Block 1: 1-8, Block 2:9-16, Block 3: 17-25, Block 4: 26-32
+## basteln
+```{r}
+Versuchsleiterin <-c("Alicia","Kaya", "Keti", "Danuscha")
 
-Helikopter: 17-32 : \newline
-Keti zeichnet & Danuscha schneidet und faltet das Helikopter \newline
-Keti wirft und Danuscha stoppt die Zeit \newline
+# die erstgenannte Person zeichnet und die zweitgenannte Person schneidet/faltet
 
-Block :1 = Zeichnen:Danuscha, basteln:Keti, Werfen:Danuscha, Zeit stoppen : Keti \newline
-2= Zeichnen: Keti, basteln: Danuscha, Werfen: Keti, Zeitstoppen: Danuscha \newline 
+set.seed(1750)
+#Block 1 
+sample(Versuchsleiterin, 2)
+#[1] "Alicia" "Keti"  
+
+set.seed(1751)
+#Block 2 Basteln
+sample(Versuchsleiterin, 2)
+#[1] "Danuscha" "Alicia" 
+
+set.seed(1752)
+#Block 3 Basteln
+sample(Versuchsleiterin, 2)
+#[1] "Alicia" "Kaya"  
+
+set.seed(1753)
+#Block 4 Basteln
+sample(Versuchsleiterin, 2)
+#[1] "Danuscha" "Keti"    
+```
 
 
 
@@ -196,5 +213,16 @@ Block :1 = Zeichnen:Danuscha, basteln:Keti, Werfen:Danuscha, Zeit stoppen : Keti
 		 
 	
 
+z.B :Blöcke von  Versuchsleiterinnen? \\
+Helikopter: 1-16: \newline
+Danuscha zeichnet & Keti schneidet und faltet das Helikopter \newline
+Danuscha wirft und Keti stoppt die Zeit \newline
+
+Helikopter: 17-32 : \newline
+Keti zeichnet & Danuscha schneidet und faltet das Helikopter \newline
+Keti wirft und Danuscha stoppt die Zeit \newline
+
+Block :1 = Zeichnen:Danuscha, basteln:Keti, Werfen:Danuscha, Zeit stoppen : Keti \newline
+2= Zeichnen: Keti, basteln: Danuscha, Werfen: Keti, Zeitstoppen: Danuscha \newline 
 
 		 
