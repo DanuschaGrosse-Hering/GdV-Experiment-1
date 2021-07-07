@@ -121,7 +121,7 @@ RandomExperiment = ExperimentDesign[order(ExperimentDesign$ord), ]
    & -1 & 1 \\ 
   \hline
  A & 6cm & 12cm \\ 
-  B & 5cm & 3cm \\ 
+  B & 5cm & 3.5cm \\ 
  C & 5cm & 2cm \\ 
   D & 9cm & 4.5cm \\ 
   E & 3cm & 0cm \\ 
