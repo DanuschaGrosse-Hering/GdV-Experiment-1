@@ -11,15 +11,37 @@ setwd("C:\\Users\\danus\\OneDrive\\Uni\\4.Semester\\Grundlagen der Versuchspalnu
 # Versuchsablauf
 
 # Screening
-
 ```{r}
-Screening <- read.csv("Screening.CSV", sep = ";")
+
+library(SixSigma)
+
+
+ExperimentDesign  = expand.grid(A = c(-1, 1), B = c(-1,1), C = c(-1, 1), D = c(-1,1), E = c(-1,1) )
+"F" = ExperimentDesign$A * ExperimentDesign$C * ExperimentDesign$D
+G = ExperimentDesign$A * ExperimentDesign$B * ExperimentDesign$C
+
+
+
+ExperimentDesign$F = F
+ExperimentDesign$G = G
+
 ```
 
+```{r}
+Screening <- read.csv("Screening.CSV", sep = ";",dec = ",")
+S <- Screening[order(Screening[,2]),]
+S <-cbind(S, ExperimentDesign)
+```
 
+```{r}
+summary(lm(Zeit.ohne.Klammer ~A+B+C+D+E+F+G, data= S))
+```
+```{r}
+summary(lm(Zeit.mit.Klammer ~A+B+C+D+E+F+G, data= S))
+```
 
 # Optimierung
 ```{r}
-Optimierung <-read.csv("Optimierung.CSV", sep = ";")
+Optimierung <-read.csv("Optimierung.CSV", sep = ";",dec = ",")
 ```
 
