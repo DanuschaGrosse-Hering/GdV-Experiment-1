@@ -205,4 +205,87 @@ data.frame(Block,Zeichnen=z, Schneiden_Falten=s)
 \end{table}
 		 
 	
+optimierung 3^2 Plan
+A : -1:= 6cm 0:=9cm 1:=12cm
+G:  -1:=100°  0:= 117.5° 1:= 135°
+
+für die anderen Längen nutzen wir die vorgegebenen Längen
+
+
+
+vollständig balanzierter Versuchsplan
+
+```{r}
+library(agricolae)
+set.seed(1726)
+p <-design.ab(c(3,3), serie=0, r=2)$book
+
+a <- p$A
+b <- p$B
+
+a[which(a=="1")] <- -1
+a[which(a=="2")] <- 0
+a[which(a=="3")] <- 1
+
+```
+oder
+
+```{r}
+#erster Durchlauf
+set.seed(1735)
+p1 <-expand.grid(A = c(-1,0, 1),  G = c(-1,0,1) )
+p1 <- cbind(1:9,p1)
+#zweiter Durchlauf
+set.seed(1736)
+s <-sample(1:9,9)
+p2 <-p1[s,]
+
+
+p <- rbind(p1,p2)
+names(p)[1] <- "Nr."
+```
+
+<A(\alpha),B(\alpha)>=0
+
+
+Kapitel 11 seite 213 Kleppmann Versuchsplanung 2020
+```{r}
+ a <-round(sqrt(0.5*(sqrt(9*18)-9)), digits=3)
+ p[which(p$A*p$G ==0),2:3] <- p[which(p$A*p$G ==0),2:3] *a
+ 
+f_A <- function(x)
+  {
+    lm(c(6,12)~c(-1,1))$coeff %*% c(1,x)
+  }
+
+
+
+f_G <- function(x)
+  {
+    lm(c(100,135)~c(-1,1))$coeff %*% c(1,x)
+  }
+
+
+Stufen <- c(-a,-1,0,1,a)
+A <-c(f_A(-a),6,9,12,f_A(a))
+G <-c(f_G(-a),100,117.5,135,f_G(a))
+kable(rbind(Stufen,A,G))
+
+xtable(rbind(Stufen,A,G))
+
+  
+```
+```{r}
+library(knitr)
+namen <- c(rep(Versuchsleiterin,2))
+set.seed(1000)
+zeichnen<- sample(namen)
+zeichnen[9] <- sample(namen,1)
+basteln <- c("Alicia", "Danuscha", "Keti", "Alicia", "Kaya", "Kaya", "Danuscha", "Keti", "Danuscha")
+
+kable(rbind(1:9,zeichnen, basteln))
+```
+
+
+
 
