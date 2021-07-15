@@ -50,7 +50,8 @@ Es wurden 7 Faktoren ausgewählt, die einen Einfluss haben können. Diese Faktor
  
  Ein $2^{8-3} $ Screening Plan wird benutzt. \newline
 ```{r}
-
+library(knitr)
+library(xtable)
 library(SixSigma)
 
 
@@ -230,7 +231,7 @@ a[which(a=="3")] <- 1
 ```
 oder
 
-```{r}
+```{r echo=TRUE}
 #erster Durchlauf
 set.seed(1735)
 p1 <-expand.grid(A = c(-1,0, 1),  G = c(-1,0,1) )
@@ -243,9 +244,10 @@ p2 <-p1[s,]
 
 p <- rbind(p1,p2)
 names(p)[1] <- "Nr."
+p
 ```
 
-<A(\alpha),B(\alpha)>=0
+$<A(\alpha),B(\alpha)>=0$
 
 
 Kapitel 11 seite 213 Kleppmann Versuchsplanung 2020
