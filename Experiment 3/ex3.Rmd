@@ -254,7 +254,7 @@ Kapitel 11 seite 213 Kleppmann Versuchsplanung 2020
 ```{r}
  a <-round(sqrt(0.5*(sqrt(9*18)-9)), digits=3)
  p[which(p$A*p$G ==0),2:3] <- p[which(p$A*p$G ==0),2:3] *a
- 
+ p
 f_A <- function(x)
   {
     lm(c(6,12)~c(-1,1))$coeff %*% c(1,x)
