@@ -1,9 +1,8 @@
 ---
-title: "Auswertung des Helikopterexperiments"
+title: "Untitled"
 author: "Danuscha Große-Hering"
-date: "05.Juli 2021"
+date: "17 7 2021"
 output:
-  extra_dependencies: ["bbm", "threeparttable"]
   pdf_document: default
 ---
 ```{r}
@@ -78,13 +77,22 @@ $\Rightarrow f(x_1,x_2)=3.47+00.44 \cdot x_1+0.06 \cdot x_1^2-0.67 \cdot x_2 + 0
 0.44+0.12 \cdot x_1 \\
 -0.67+0.58 \cdot x_2
 \end{pmatrix}$
+$\Rightarrow \frac{\partial{f}}{\partial{x}} = 0 \Rightarrow 0.44=-0.12 \cdot x_1 \land 0.67=0.58 \cdot x_2 \Rightarrow x_1 =-3.67 \land x_2=1.16$
+
+$\Rightarrow \frac{\partial^2{f}}{\partial^2{x}}= 
+\begin{pmatrix}
+0.12    & 0 \\
+0 & 0.58 
+\end{pmatrix}$
 
 
 ```{r}
-y_observ=c(1.2,0.5,1.5,1.3,0.2,1.4)
-data_set=data.frame(y=y_observ)
-data_set$A = c(-1,0,1,-1,0,1)
-data_set$Asquare = data_set$A^2
-lm(y~A+Asquare, data=data_set)
+ det(matrix(c(0.12,0,0,0.58), ncol = 2))
 ```
 
+$\Rightarrow \Rightarrow \frac{\partial^2{f}}{\partial^2{x}}$ ist positiv definit $\Rightarrow x=$ 
+$\begin{pmatrix}
+-3.67\\
+1.16 
+\end{pmatrix}$ 
+ ist Maximum. 
