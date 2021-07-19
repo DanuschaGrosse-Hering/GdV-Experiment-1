@@ -3,11 +3,11 @@ title: "Auswertung des Helikopterexperiments"
 author: "Danuscha Große-Hering"
 date: "05.Juli 2021"
 output:
-  extra_dependencies: ["bbm", "threeparttable"]
+ # extra_dependencies: ["bbm", "threeparttable"]
   pdf_document: default
 ---
 ```{r}
-setwd("C:\\Users\\danus\\OneDrive\\Uni\\4.Semester\\Grundlagen der Versuchspalnung\\1.Experiment\\GdV-Experiment-1\\Experiment 3")
+#setwd("C:\\Users\\danus\\OneDrive\\Uni\\4.Semester\\Grundlagen der Versuchspalnung\\1.Experiment\\GdV-Experiment-1\\Experiment 3")
 ```
 
 # Versuchsablauf
@@ -40,6 +40,11 @@ summary(lm(Zeit.ohne.Klammer ~A+B+C+D+E+F+G, data= S))
 ```
 ```{r}
 summary(lm(Zeit.mit.Klammer ~A+B+C+D+E+F+G, data= S))
+#install.packages("BsMD")
+library(BsMD)
+par(mfrow = c(1,2))
+DanielPlot(lm(Zeit.ohne.Klammer ~ A +B + C + D+E+F+G, data = S), pch = 15)
+DanielPlot(lm(Zeit.mit.Klammer ~A + B + C + D+E+F+G, data= S), pch = 15)
 ```
 
 # Optimierung
@@ -58,6 +63,9 @@ p2 <-p1[s,]
 
 p <- rbind(p1,p2)
 names(p)[1] <- "Nr."
+a <-round(sqrt(0.5*(sqrt(9*18)-9)), digits=3)
+p[which(p$A*p$G ==0),2:3] <- p[which(p$A*p$G ==0),2:3] *a
+
 o1 <-cbind(Optimierung,p[1:9,2:3])
 
 o2 <- o1[,-3]
@@ -71,6 +79,33 @@ o$Asquare <- o$A^2
 o$Gsquare <- o$G^2
 
 lm(Zeit ~A + Asquare+G+Gsquare, data = o)
+
+##MIT Wechselwirkung
+MM = lm(Zeit ~A * G  + Asquare+Gsquare, data = o)
+thetaM <- MM$coefficients
+modellM <- function(t){
+  thetaM[1] + thetaM[2] * t[1] + thetaM[4] * t[1]^2 + thetaM[3] * t[2] + 
+    thetaM[5] * t[2]^2 + thetaM[6] * t[1] * t[2]
+}
+
+MIT = optim(c(1,1),  function(x) -modellM(x), method = "L-BFGS-B", 
+             lower = c(-1.365, -1.365), upper = c(1.365,1.365))
+
+modellM(c(1.365, -1.365))
+MIT
+
+## OHNE
+
+M = lm(Zeit ~A + G  + Asquare+Gsquare, data = o)
+theta <- M$coefficients
+modell <- function(t){
+  theta[1] + theta[2] * t[1] + theta[4] * t[1]^2 + theta[3] * t[2] + 
+    theta[5] * t[2]^2 #+ theta[6] * t[1] * t[2]
+}
+
+OHNE = optim(c(0.5,0.5),  function(x) -modell(x), method = "L-BFGS-B", 
+      lower = c(-1.365, -1.365), upper = c(1.365,1.365))
+OHNE
 ```
 
 
